@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Green Globe',
-  description: 'Power by PMP',
+  description: 'Powered by PMP',
 }
 
 export default function RootLayout({ children }) {
