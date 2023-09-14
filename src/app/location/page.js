@@ -1,3 +1,7 @@
 export default function Page() {
-    return <h1>Hello, Location!</h1>
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>Location</h1>
+    </main>
+  )
   }
