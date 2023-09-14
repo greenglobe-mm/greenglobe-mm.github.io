@@ -4,27 +4,27 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="italic fixed left-0 top-0 flex w-full justify-center lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-green-950 lg:p-4 lg:dark:bg-green-800/30 font-mono font-bold bg-gradient-to-r from-green-950 to-green-700 text-white px-2">
+      <div className="z-10 max-w-5xl w-full font-mono lg:flex">
+        <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[500px] after:translate-x-1/3 after:bg-gradient-conic after:from-green-50 after:via-green-50 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-green-100 before:dark:opacity-10 after:dark:from-green-200 after:dark:via-[#005533] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+          <Image
+            className="relative dark:drop-shadow-[0_0_0.3rem_#00000070] rounded-full hover:dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+            src="/gg.png"
+            alt=""
+            width={150}
+            height={150}
+            priority
+          />
+        </div>
+        <p className="relative self-end italic subpixel-antialiased hover:text-white text-stone-300 font-bold text-lg px-2">
           Better Life For Farmers
         </p>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-green-50 after:via-green-50 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-green-100 before:dark:opacity-10 after:dark:from-green-200 after:dark:via-[#005533] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-          src="/gg.png"
-          alt=""
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="max-w-5xl w-full">
+        <p className="antialiased text-base font-medium indent-8 text-slate-100">
+          Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges. Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges. Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges. Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges. Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges. Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges.
+        </p>
       </div>
-
-      <p className="m-0 flex text-base font-medium text-gray-300">
-        Green Globe Company Limited was founded in 2022. Our company is still
-        young but is up for the challenges.
-      </p>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <Link
