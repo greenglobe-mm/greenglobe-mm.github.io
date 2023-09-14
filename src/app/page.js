@@ -22,7 +22,8 @@ export default function Home() {
       </div>
 
       <p className="m-0 flex text-base font-medium text-gray-300">
-        Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges.
+        Green Globe Company Limited was founded in 2022. Our company is still
+        young but is up for the challenges.
       </p>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
