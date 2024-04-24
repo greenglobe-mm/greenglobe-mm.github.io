@@ -16,7 +16,7 @@ export default function Home() {
           />
         </div>
         <p className="relative self-end italic subpixel-antialiased hover:text-white text-stone-300 font-bold text-lg px-2">
-          Better Life For Farmers
+          Make your grass greener...
         </p>
       </div>
 
@@ -83,7 +83,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Visit our plant
+            Visit our farm
           </p>
         </Link>
       </div>
