@@ -16,7 +16,7 @@ export default function Home() {
           />
         </div>
         <p className="relative self-end italic subpixel-antialiased hover:text-white text-stone-300 font-bold text-lg px-2">
-          Make your grass greener...
+          Make Your Grass Greener ...
         </p>
       </div>
 
