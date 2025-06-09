@@ -15,13 +15,13 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gradient-to-b from-green-900 via-green-700 to-green-400">
       <LoadingModal isLoading={isLoading} />
       <div className="z-10 max-w-5xl w-full font-mono lg:flex">
         <div className="relative flex place-items-center">
           <img
             className="relative rounded-full"
-            src="/gg.png"
+            src={process.env.PUBLIC_URL + "/gg.png"}
             alt=""
             width={150}
             height={150}
