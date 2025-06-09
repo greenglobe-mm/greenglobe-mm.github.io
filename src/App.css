@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.category-slide.swiper-slide-active {
+  transform: scale(1.25) !important;
+  z-index: 2;
+}
