@@ -1,17 +1,10 @@
 import React, { useEffect, useState, Suspense } from "react";
 import { Link } from "react-router-dom";
-import articleInfo from "../resources/articleInfo";
 import categories from "../resources/categories";
 import Loading from "./Loading";
 
 export default function Articles() {
   const [testValue, setTestValue] = useState("");
-  const [toggleViewMode, setToggleViewMode] = useState(false);
-  const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    setArticles(categories);
-  }, []);
 
   useEffect(() => {
     if (sessionStorage.getItem("someTestValue")) {
