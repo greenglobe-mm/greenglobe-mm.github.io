@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TractorAnimation from "./tractorAnimation";
 
 const LoadingModal = ({ isLoading }) => {
+  const [animationDistance, setAnimationDistance] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setAnimationDistance(window.innerWidth * 0.6 - 100);
+    }
+  }, []);
+
   if (!isLoading) return null;
 
   return (
@@ -9,7 +17,7 @@ const LoadingModal = ({ isLoading }) => {
       <div className="absolute left-[20%] w-[60%] top-1/3">
         <TractorAnimation
           animationDuration={1000}
-          animationDistance={window.innerWidth * 0.6 - 100} // subtract icon size for margin
+          animationDistance={animationDistance}
           iconSize="7em"
           iconColor="red"
         />

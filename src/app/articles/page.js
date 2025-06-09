@@ -14,7 +14,7 @@ export default function Page() {
   useEffect(() => {
     const numberOfPage = articleInfo.numberOfFiles;
     setArticles(categories);
-  });
+  }, []);
 
   useEffect(() => {
     // set props data to session storage or local storage
@@ -41,9 +41,15 @@ export default function Page() {
       <Suspense fallback={<Loading />}>
         <div className="grid grid-cols-8 w-full justify-around">
           {categories.map((item, index) => (
-            <Link href="/detail" class="mx-auto max-w-2xl p-2">
+            <Link href="/detail" class="mx-auto max-w-2xl p-2" key={index}>
               <p class="flex justify-center">
-                <img src={item.image} alt="{company.name}" className="w-36 h-36"/>
+                <Image
+                  src={item.image}
+                  alt="{company.name}"
+                  className="w-36 h-36"
+                  width={144}
+                  height={144}
+                />
               </p>
               <div className="flex">
                 <p className="w-36 text-xl text-center text-slate-700 bg-yellow-400">

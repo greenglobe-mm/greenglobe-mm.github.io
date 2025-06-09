@@ -15,7 +15,7 @@ const TractorAnimation = ({
     setTimeout(() => {
       setAnimate(false);
     }, animationDuration);
-  });
+  }, [animationDuration]); // <-- add dependency
 
   const tractorStyle = {
     fontSize: iconSize,
