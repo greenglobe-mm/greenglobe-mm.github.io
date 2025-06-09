@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
+import Loading from "../articles/loading";
 
 export default function Page() {
   const [testValue, setTestValue] = useState("");
@@ -14,7 +15,9 @@ export default function Page() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Hello, Contact Us!</h1>
+      <Suspense fallback={<Loading />}>
+        <h1>This wil be detail view of an article... {testValue} ...</h1>
+      </Suspense>
     </main>
   );
 }

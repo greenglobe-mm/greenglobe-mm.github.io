@@ -1,9 +1,31 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import LoadingModal from "./components/loadingModal";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a network request
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  useEffect(() => {
+    sessionStorage.setItem("someTestValue", "12345");
+    // set props data to session storage or local storage
+    // if (sessionStorage.getItem("someTestValue")) {
+    //   // Restore the contents of the text field
+    //   tempValue = sessionStorage.getItem("someTestValue");
+    // }
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <LoadingModal isLoading={isLoading} />
       <div className="z-10 max-w-5xl w-full font-mono lg:flex">
         <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[500px] after:translate-x-1/3 after:bg-gradient-conic after:from-green-50 after:via-green-50 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-green-100 before:dark:opacity-10 after:dark:from-green-200 after:dark:via-[#005533] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
           <Image
@@ -16,13 +38,22 @@ export default function Home() {
           />
         </div>
         <p className="relative self-end italic subpixel-antialiased hover:text-white text-stone-300 font-bold text-lg px-2">
-          Make Your Grass Greener ...
+          Make Your Grass Greener . . .
         </p>
       </div>
 
       <div className="max-w-5xl w-full">
         <p className="antialiased text-base font-medium indent-8 text-slate-100">
-          Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges. Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges. Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges. Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges. Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges. Green Globe Company Limited was founded in 2022. Our company is still young but is up for the challenges.
+          Green Globe Company Limited was founded in 2022. Our company is still
+          young but is up for the challenges. Green Globe Company Limited was
+          founded in 2022. Our company is still young but is up for the
+          challenges. Green Globe Company Limited was founded in 2022. Our
+          company is still young but is up for the challenges. Green Globe
+          Company Limited was founded in 2022. Our company is still young but is
+          up for the challenges. Green Globe Company Limited was founded in
+          2022. Our company is still young but is up for the challenges. Green
+          Globe Company Limited was founded in 2022. Our company is still young
+          but is up for the challenges.
         </p>
       </div>
 
